@@ -7,9 +7,8 @@
 ---
 2. Template Literals - usage
 const fullNametl = `${firstName} ${lastName}`
-console.log(fullNametl)
----
-using Template Literals for multiline strings
+console.log(fullNametl);
+// using Template Literals for multiline strings
 let multilineString2 = `${firstName}
 ${lastName}
 `;
