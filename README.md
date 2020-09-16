@@ -31,4 +31,13 @@ console.log(author1);
 console.log(auth1 + ' ' + auth2);
 ---
 5. Object Literal
-function storeCountryCapital
+function displayCountryCapital(country, capitalOfCountry, region, province, capitalCityOfProvince) {
+    const displayProvinceCapital = {province, capitalCityOfProvince};
+    console.log(displayProvinceCapital);
+    return displayProvinceCapital;
+}
+
+const d = displayCountryCapital('Canada', 'Ottawa', 'Atlantic Region', 'Newfoundland and Labrador', 'St. Johns');
+document.getElementById('example').innerText = `Capital of \"${d.province}\" province is  \"${d.capitalCityOfProvince}\"`;
+---
+6. Object Literal Challenge

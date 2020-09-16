@@ -75,7 +75,7 @@ const d = displayCountryCapital('Canada', 'Ottawa', 'Central Canada', 'Ontario',
 document.getElementById('example').innerText = `${d.newProvince} ${d.newProvinceCapital}`;
 
 // New Way
-*/
+
 function displayCountryCapital(country, capitalOfCountry, region, province, capitalCityOfProvince) {
     const displayProvinceCapital = {province, capitalCityOfProvince};
     console.log(displayProvinceCapital);
@@ -84,3 +84,39 @@ function displayCountryCapital(country, capitalOfCountry, region, province, capi
 
 const d = displayCountryCapital('Canada', 'Ottawa', 'Atlantic Region', 'Newfoundland and Labrador', 'St. Johns');
 document.getElementById('example').innerText = `Capital of \"${d.province}\" province is  \"${d.capitalCityOfProvince}\"`;
+
+// 5. Object Literal Challenge
+// Combining template literal, object literal and object destructuring
+
+// Part 1
+function returnFullProvinceInfo(provinceInfo) {
+    const fullProvinceInfo = {
+        region: provinceInfo.region,
+        province: provinceInfo.province,
+        capital: provinceInfo.capital,
+        country: 'Canada',
+        countryCapital: 'Ottawa'
+    }
+    return fullProvinceInfo;
+}
+
+const d = returnFullProvinceInfo({region: 'Atlantic Region', province: 'Newfoundland and Labrador', capital: 'St. Johns'});
+console.log(d);
+document.getElementById('example').innerText = `${d.region}, ${d.province}, ${d.capital}, ${d.country}, ${d.countryCapital}`;
+*/
+function returnFullProvinceInfo(provinceInfo) {
+    const {region, province, capital} = provinceInfo;
+    const fullProvinceInfo = {
+        region,
+        province,
+        capital,
+        country: 'Canada',
+        countryCapital: 'Ottawa'
+    }
+    return fullProvinceInfo;
+}
+
+const d = returnFullProvinceInfo({region: 'Atlantic Region', province: 'Newfoundland and Labrador', capital: 'St. Johns'});
+console.log(d);
+console.log(`${d.region}, ${d.province}, ${d.capital}, ${d.country}, ${d.countryCapital}`);
+document.getElementById('example').innerText = `${d.region}, ${d.province}, ${d.capital}, ${d.country}, ${d.countryCapital}`;
