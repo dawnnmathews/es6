@@ -103,7 +103,7 @@ function returnFullProvinceInfo(provinceInfo) {
 const d = returnFullProvinceInfo({region: 'Atlantic Region', province: 'Newfoundland and Labrador', capital: 'St. Johns'});
 console.log(d);
 document.getElementById('example').innerText = `${d.region}, ${d.province}, ${d.capital}, ${d.country}, ${d.countryCapital}`;
-*/
+
 function returnFullProvinceInfo(provinceInfo) {
     const {region, province, capital} = provinceInfo;
     const fullProvinceInfo = {
@@ -120,3 +120,5 @@ const d = returnFullProvinceInfo({region: 'Atlantic Region', province: 'Newfound
 console.log(d);
 console.log(`${d.region}, ${d.province}, ${d.capital}, ${d.country}, ${d.countryCapital}`);
 document.getElementById('example').innerText = `${d.region}, ${d.province}, ${d.capital}, ${d.country}, ${d.countryCapital}`;
+*/
+// 6. For of Loop

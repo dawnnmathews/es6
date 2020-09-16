@@ -41,3 +41,21 @@ const d = displayCountryCapital('Canada', 'Ottawa', 'Atlantic Region', 'Newfound
 document.getElementById('example').innerText = `Capital of \"${d.province}\" province is  \"${d.capitalCityOfProvince}\"`;
 ---
 6. Object Literal Challenge
+function returnFullProvinceInfo(provinceInfo) {
+    const {region, province, capital} = provinceInfo;
+    const fullProvinceInfo = {
+        region,
+        province,
+        capital,
+        country: 'Canada',
+        countryCapital: 'Ottawa'
+    }
+    return fullProvinceInfo;
+}
+
+const d = returnFullProvinceInfo({region: 'Atlantic Region', province: 'Newfoundland and Labrador', capital: 'St. Johns'});
+console.log(d);
+console.log(`${d.region}, ${d.province}, ${d.capital}, ${d.country}, ${d.countryCapital}`);
+document.getElementById('example').innerText = `${d.region}, ${d.province}, ${d.capital}, ${d.country}, ${d.countryCapital}`;
+---
+7. For of Loop
