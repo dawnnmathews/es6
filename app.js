@@ -29,7 +29,7 @@ ${lastName}
 `;
 console.log(multilineString2);
 document.getElementById('example').innerText = multilineString2;
-*/
+
 
 // 2. Destructuring Objects
 const authorProfile = {
@@ -59,3 +59,28 @@ let [auth1, auth2] = ['Leo Tolstoy', 'Charles Dickens', 'Ernest Hemingway', 'F. 
 auth2 = 'Dan Brown'
 console.log(author1);
 console.log(auth1 + ' ' + auth2);
+
+
+
+// 4. Object Literal
+
+// Old Way
+function displayCountryCapital(country, capitalOfCountry, region, province, capitalCityOfProvince) {
+    const displayProvinceCapital = {newProvince: province, newProvinceCapital: capitalCityOfProvince};
+    console.log(displayProvinceCapital);
+    return displayProvinceCapital;
+}
+
+const d = displayCountryCapital('Canada', 'Ottawa', 'Central Canada', 'Ontario', 'Toronto');
+document.getElementById('example').innerText = `${d.newProvince} ${d.newProvinceCapital}`;
+
+// New Way
+*/
+function displayCountryCapital(country, capitalOfCountry, region, province, capitalCityOfProvince) {
+    const displayProvinceCapital = {province, capitalCityOfProvince};
+    console.log(displayProvinceCapital);
+    return displayProvinceCapital;
+}
+
+const d = displayCountryCapital('Canada', 'Ottawa', 'Atlantic Region', 'Newfoundland and Labrador', 'St. Johns');
+document.getElementById('example').innerText = `Capital of \"${d.province}\" province is  \"${d.capitalCityOfProvince}\"`;
