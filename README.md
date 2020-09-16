@@ -79,3 +79,33 @@ document.getElementById('example').innerText = `${d.region}, ${d.province}, ${d.
 
 ---
 7. For of Loop
+
+```javascript
+// For of loop allows us to iterate through an entire iterable
+// we can use the for of loop with various iterables - example - string, map, sets, typed arrays, 
+
+let proviceName = ['Nunavut', 'Alberta', 'Saskatchewan', 'Yukon', 'Manitoba', 'British Columbia', 'Ontario', 'Quebec', 'Prince Edward Island', 'Newfoundland and Labrador', 'Northwest Territories', 'Nova Scotia', 'New Brunswick'];
+let populationByProvince = [31906, 3645257, 1033381, 33897, 1208268, 4400057, 12851821, 7903001, 140204, 514536, 41462, 921727, 751171];
+
+let totalPopulation = 0;
+let i = 0;
+let s = '';
+
+for(const population of populationByProvince) {
+    s += `Population of ${proviceName[i]} is ${population}, \n`
+    i++;
+    totalPopulation += population;
+}
+
+let s1 = `Total Population of canada is : ${totalPopulation}`;
+
+s += s1;
+
+// console.log(totalPopulation);
+console.log(s);
+document.getElementById('example').innerText = s;
+
+```
+---
+
+8. For of Loop (Challenge)
